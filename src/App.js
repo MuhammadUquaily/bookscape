@@ -1,16 +1,9 @@
 import { useState } from 'react'
 import './App.css';
 import Header from './components/header/header'
-import BookItem from './components/bookItem/bookItem'
+import BookList from './components/bookList/bookList'
 
 function App() {
-  const testBook = {
-    "title": "Harry Potter and the Philosopher's Stone",
-    "author_name": ["J.K. Rowling"],
-    "cover_i": 8235891,
-    "isbn": ["9780747532743", "0747532745"],
-    "first_publish_year": 1997
-  };
   const [books, setBooks] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [hasNextPage, setHasNextPage] = useState(false);
@@ -42,7 +35,7 @@ function App() {
   return (
     <div className="App">
       <Header handleSearch={handleSearch} />
-      
+      <BookList books={books} />
     </div>
   );
 }
