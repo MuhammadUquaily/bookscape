@@ -1,0 +1,42 @@
+.book-list-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-family: "Times New Roman", serif;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.nav-button {
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    width: 45px;
+    height: 45px;
+    opacity: 0.75;
+    border: 1px solid #e7eae8;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    animation: bounce_513 1s infinite;
+}
+
+@keyframes bounce_513 {
+    0%, 100% {
+        transform: translateX(-25%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+        transform: translateX(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
